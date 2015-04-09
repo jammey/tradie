@@ -29,6 +29,7 @@ var PageMessage = {
 
 var Config = {
     rootPath: "http://192.168.5.111:8888/Api.svc/",
+
     chatHubRootPath: "http://192.168.5.111:8088/",
     thirdparty_redirect_uri: "http://localhost:47661/Social.html",
     thirdparty_oauth_proxy: "https://auth-server.herokuapp.com/proxy",
