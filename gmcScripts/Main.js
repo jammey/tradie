@@ -399,7 +399,7 @@ $(document).on("pageshow", "#pageMain", function (event, ui) {
     $("#tradie_purchaseCash").off("click").on("click", function () {
         showTradieCashSheet(function (buttonIndex) {
             if (buttonIndex < 4) {
-                alert(app_productIds[buttonIndex - 1]);
+                window.storekit.restore();
                 window.storekit.purchase(app_productIds[buttonIndex - 1], 1);
             }
         });
@@ -408,7 +408,7 @@ $(document).on("pageshow", "#pageMain", function (event, ui) {
     $("#tradie_becomePro").off("click").on("click", function () {
         showTradieProSheet(function (buttonIndex) {
             if (buttonIndex < 3) {
-                alert(app_productIds[buttonIndex - 1]);
+                window.storekit.restore();
                 window.storekit.purchase(app_productIds[buttonIndex - 1], 1);
             }
         });
