@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="Scripts/iscroll.js"></script>
+        <script src="Scripts/jquery-1.9.1.min.js"></script>
+        <script src="Scripts/jquery.signalR-2.2.0.js"></script>
+        <script src="Scripts/jquery.mobile-1.4.4.min.js"></script>
+        <script src="Scripts/jquery.image.lazyload.js"></script>
+        <script src="Scripts/customPanel.js"></script>
+        <script src="Scripts/hello.js"></script>
+        <script src="Scripts/Swipe.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script src="Scripts/jquery.autosize.min.js"></script>
+        <script src="Scripts/jquery.md5.js"></script>
+        <script src="gmcScripts/resource.js"></script>
+        <script src="gmcScripts/Common.js"></script>
+        <script src="gmcScripts/Core.js"></script>
+        <script src="gmcScripts/Main.js"></script>
+        <script src="gmcScripts/chat.js"></script>
+        <script src="gmcScripts/reg.js"></script>
+        <script src="gmcScripts/completeprofile.js"></script>
+        <script src="gmcScripts/forgetpassword.js"></script>
+        <link href="css/jquery.mobile.flatui.css" rel="stylesheet" />
+        <link href="css/idangerous.swiper.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
+	</head>
+	<body>
+        <div data-role="page" id="pageCompleteProfile" class="c_Tax-to-Pacific" data-theme="a">
+            <div class="ui-content">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a" style="width: 30%;">
+                        <hr>
+                    </div>
+                    <div class="ui-block-b c_WhiteLabel" style="text-align: center;width: 40%;">complete profile</div>
+                    <div class="ui-block-c" style="width: 30%;">
+                        <hr>
+                    </div>
+                </div><br />
+                <div style="text-align: center;"><img src="Images/logo.png" style="width:80px;" /></div>
+                <div id="pageLogin_tabReg">
+                    <div>
+                        <label class="c_WhiteLabel">Tradie Name</label>
+                        <input data-theme="a" type="text" id="pageCompleteProfile_txtTradieName" class="form-control" placeholder="Enter your tradie name">
+                    </div>
+                    <div>
+                        <label class="c_WhiteLabel">First Name</label>
+                        <input data-theme="a" type="text" id="pageCompleteProfile_txtFirstName" class="form-control" placeholder="Enter your first name">
+                    </div>
+                    <div>
+                        <label class="c_WhiteLabel">Last Name</label>
+                        <input data-theme="a" type="text" id="pageCompleteProfile_txtLastName" class="form-control" placeholder="Enter your last name">
+                    </div>
+                    <div>
+                        <label class="c_WhiteLabel">Category</label>
+                        <select name="pageCompleteProfile_selectCategory" id="pageCompleteProfile_selectCategory" class="ui-mini" data-theme="c" multiple="multiple" data-native-menu="false">
+                            <option>Please choose one or more categories</option>
+                        </select>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label class="c_WhiteLabel">Post Code</label>
+                            <input data-theme="a" type="number" style="width:95%;" id="pageCompleteProfile_txtPostCode" placeholder="Enter postcode" max="99999">
+                        </div>
+                        <div class="ui-block-b">
+                            <label class="c_WhiteLabel">State</label>
+                            <select name="pageCompleteProfile_selectState" id="pageCompleteProfile_selectState" class="ui-mini" data-theme="c"></select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="c_WhiteLabel">Surburb</label>
+                        <textarea data-theme="a" id="pageCompleteProfile_Surburb" placeholder="Enter your surburb"></textarea>
+                    </div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a data-role="button" style="background-color: #ab5165; color: white; border: #ab5165; margin-left: 0px; border-radius:2px; z-index:9997" id="pageCompleteProfile_btnSkip">Skip</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-theme="a" href="" data-role="button" id="pageCompleteProfile_btnNext" class="ui-mini" style="margin-right: 0px; border-radius: 2px; border:0px">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display:none" id="coverDiv">
+            <div class="ui-popup-screen ui-overlay-f in" style="background-color:#000;"></div>
+            <div class="bubble ui-mini" id="divBubble">
+                <p id="coverDiv_text"></p>
+                <a data-role="button" id="coverDiv_btn" data-theme="a" data-inline="true" data-mini="true">gotcha</a>
+            </div>
+            <div class="skip"><a href="" data-role="none" onclick="$('#coverDiv').hide()">skip>></a></div>
+        </div>
+	</body>
+</html>

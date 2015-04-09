@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/jquery.mobile-1.4.4.min.js"></script>
+    <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>-->
+    <!--<script src="Scripts/jquery.ui.map.full.min.js"></script>-->
+    <!--<script src="Scripts/jquery.ui.map.services.min.js"></script>-->
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script src="gmcScripts/resource.js"></script>
+    <script src="gmcScripts/Common.js"></script>
+    <script src="gmcScripts/Core.js"></script>
+    <link href="css/jquery.mobile.flatui.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div data-role="page" id="pageLogin" data-theme="none" class="c_Iris-to-Pacific">
+        
+        <div class="ui-content">
+            <div class="" style="text-align:center"><img src="Images/logo.png" style="width: 100px;" class="avatar" /></div>
+            
+            <div class="ui-grid-b">
+            	<div class="ui-block-a"><hr></div>
+            	<div class="ui-block-b c_White" style="text-align: center;">sign in</div>
+            	<div class="ui-block-c"><hr></div>
+			</div>
+            <div id="pageLogin_tabLogin">
+                <div>
+                    <a class="signinBtn sign_facebook" href="#" data-transition="slide">
+                    	<span>sign in with Facebook</span></a>
+                    <a class="signinBtn sign_twitter" href="#"><span>sign in with Twitter</span></a>
+                    <a class="signinBtn sign_google" href="#"><span>sign in with Google+</span></a>
+                </div>
+
+<div class="ui-grid-b">
+            	<div class="ui-block-a" style="width: 25%;"><hr></div>
+            	<div class="ui-block-b c_White" style="text-align: center;width:50%">or use mobile</div>
+            	<div class="ui-block-c" style="width: 25%;"><hr></div>
+			</div>
+                <div>
+                    <label class="c_White">MOBILE</label>
+                    <input data-theme="a" type="text" id="pageLogin_txtLoginAccount" placeholder="Mobile">
+                </div>
+                <div>
+                    <label class="c_White">PASSWORD</label>
+                    <input data-theme="d" type="password" id="pageLogin_txtLoginPassword" placeholder="Password">
+                </div>
+
+                <div style="font-size:smaller;color:white;text-decoration:none;margin-right:.5em; text-align: right;" data-theme="a">
+<select data-role="slider" data-mini="true" data-theme="a">
+    <option value="off">No</option>
+    <option value="on" selected="">Yes</option>
+</select> <span style="float:right; margin-left: 10px; margin-top: 15px;">Remember Me</span>
+                </div>
+
+                <a data-theme="a" href="#" data-role="button" id="pageLogin_btnLogin" class="ui-mini" data-mini="true">Sign in</a>
+				<div style="font-size:smaller;color:white;text-decoration:none;margin-right:.5em; text-align: right;">
+                    <a id="pageLogin_liForgetPassword" href="forgetpassword.html" data-transition="slide" class="darkblue">Forget password?</a>
+                </div>
+                <hr>
+                <div style="text-align: center;" class="c_White">Don't have an account? <a href="reg.html" data-transition="slide" class="darkblue">Sign Up</a></div>
+                
+            </div>
+        </div>
+        <!-- /content -->
+       
+        <script type="text/javascript">
+            $(document).on("pageshow", "#pageLogin", function (event, ui) {
+                $("#pageLogin_btnLogin").off("click").on("click", function () {
+                    var pageLogin_txtLoginAccount = $("#pageLogin_txtLoginAccount");
+                    var pageLogin_txtLoginPassword = $("#pageLogin_txtLoginPassword");
+                    if (pageLogin_txtLoginAccount.val() == "") {
+                        Messagebox.prompt("Please enter the account");
+                        return;
+                    }
+
+                    if (pageLogin_txtLoginPassword.val() == "") {
+                        Messagebox.prompt("Please enter the password");
+                        return;
+                    }
+
+                    //Ajax.getJson("DoWork", {}, function (data) {
+                    //    alert(JSON.stringify(data));
+                    //});
+
+                    //changePage("index.html");
+                });
+            });
+        </script>
+        <!-- /footer -->
+    </div>
+</body>
+</html>
