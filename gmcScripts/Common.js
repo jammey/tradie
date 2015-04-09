@@ -39,18 +39,22 @@ function initStore() {
             alert('Failed: ' + errtext);
         },
         ready: function () {
-
+            alert("ready")
             Ajax.getJson("GetProductList", { appType: 1, platform: 1 }, function (data) {
+                alert(data.IsSuccess)
                 if (data.IsSuccess) {
                     for (var i = 0; i < data.Data.length; i++) {
                         app_productIds.push(data.Data[i].ProductId);
                         app_productNames.push(data.Data[i].ProductName);
+                        alert(data.Data[i].ProductId)
                     }
 
                     window.storekit.load(app_productIds, function (validProducts, invalidProductIds) {
                         $.each(validProducts, function (i, val) {
+                            alert(val.title)
                         });
                         if (invalidProductIds.length) {
+                            alert("invalidProductIds:"+invalidProductIds.length)
                         }
                     });
                 }
